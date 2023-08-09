@@ -29,7 +29,7 @@ class banner extends StatelessWidget {
             ),
           ),
           const Text(
-            'Welcome Gbana',
+            'Welcome Blank',
             style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
@@ -44,7 +44,11 @@ class banner extends StatelessWidget {
           const SizedBox(
             height: 120,
           ),
-          InkWell(onTap: () {}, child: Glow(buttontext: 'Go To Home'))
+          InkWell(
+              onTap: () {
+                homes();
+              },
+              child: Glow(buttontext: 'Go To Home'))
         ],
       ),
     );
