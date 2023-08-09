@@ -12,7 +12,16 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        children: [],
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text(
+              'Welcome Back,',
+              style: TextStyle(fontWeight: FontWeight.w100),
+            ),
+          ),
+          Text('Blank user'),
+        ],
       ),
     );
   }
