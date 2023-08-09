@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/customwidgets/textfield.dart';
+import 'goal.dart';
 
 class profilescreen extends StatelessWidget {
   const profilescreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    void goal() {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => GoalScreen(),
+        ),
+      );
+    }
+
     return Scaffold(
       body: ListView(
         children: [
@@ -84,10 +94,13 @@ class profilescreen extends StatelessWidget {
                       child: TF(
                           assetpath: 'ui/scale.png', fieldtext: 'Your weight'),
                     ),
-                    Container(
-                      height: 50,
+                    SizedBox(
+                      height: 58,
                       width: 50,
-                      child: Image.asset('ui/kg.png'),
+                      child: Image.asset(
+                        'ui/kg.png',
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ],
                 ),
@@ -101,17 +114,24 @@ class profilescreen extends StatelessWidget {
                       child: TF(
                           assetpath: 'ui/swap.png', fieldtext: 'Your Height'),
                     ),
-                    Container(
-                      height: 50,
+                    SizedBox(
+                      height: 58,
                       width: 50,
-                      child: Image.asset('ui/cm.png'),
+                      child: Image.asset(
+                        'ui/cm.png',
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
           ),
-          Glow(buttontext: 'Next >')
+          InkWell(
+              onTap: () {
+                goal();
+              },
+              child: Glow(buttontext: 'Next >'))
         ],
       ),
     );

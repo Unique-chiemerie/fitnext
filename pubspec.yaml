@@ -84,6 +84,12 @@ flutter:
     - ui/swap.png
     - ui/cm.png
     - ui/date.png
+    - ui/goals.png
+    - ui/text.png
+    - ui/lean.png
+    - ui/skip.png
+    - ui/fattext.png
+    - ui/run.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
