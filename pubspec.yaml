@@ -92,6 +92,9 @@ flutter:
     - ui/run.png
     - ui/exitdoor.png
     - ui/mwm.png
+    - ui/Banner.png
+    - ui/bellicon.png
+    - ui/todaybanner.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
