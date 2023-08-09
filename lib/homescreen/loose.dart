@@ -63,7 +63,11 @@ class LooseFat extends StatelessWidget {
                   ],
                 ),
               ),
-              InkWell(onTap: () {}, child: Glow(buttontext: 'confirm'))
+              InkWell(
+                  onTap: () {
+                    welcomeb();
+                  },
+                  child: Glow(buttontext: 'confirm'))
             ],
           )
         ],
