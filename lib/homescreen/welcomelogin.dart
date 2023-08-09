@@ -53,7 +53,7 @@ class welcomeS extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   child: const Text(
-                    'Forgot your passoword?',
+                    'Forgot your password?',
                     style: TextStyle(
                         decoration: TextDecoration.underline,
                         color: Colors.grey),
@@ -66,35 +66,35 @@ class welcomeS extends StatelessWidget {
             child: Stack(
               children: [
                 Center(
-                  child: InkWell(
-                    onTap: () {
-                      bannerrr();
-                    },
-                    child: Glow(buttontext: ''),
-                  ),
+                  child: Glow(buttontext: ''),
                 ),
                 Positioned(
                   top: 0,
                   right: 0,
                   bottom: 0,
                   left: 0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: Image.asset('ui/exitdoor.png'),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      const Text(
-                        'Login',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
-                    ],
+                  child: InkWell(
+                    onTap: () {
+                      bannerrr();
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset('ui/exitdoor.png'),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        const Text(
+                          'Login',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.white),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -131,7 +131,7 @@ class welcomeS extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('Don\'t have an account, yet'),
+              const Text('Don\'t have an account yet?'),
               TextButton(
                   onPressed: () {},
                   child: const Text(
