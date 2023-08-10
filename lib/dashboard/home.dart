@@ -339,7 +339,7 @@ class _DashboardState extends State<Dashboard> {
                 child: Column(
                   children: [
                     const SizedBox(
-                      height: 20,
+                      height: 40,
                     ),
                     Container(
                       height: 100,
@@ -387,7 +387,15 @@ class _DashboardState extends State<Dashboard> {
                     Container(
                       height: 100,
                       width: 200,
-                      color: Colors.red,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('ui/calocard.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Column(
+                        children: [],
+                      ),
                     ),
                   ],
                 ),
