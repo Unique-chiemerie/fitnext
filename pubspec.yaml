@@ -95,6 +95,8 @@ flutter:
     - ui/Banner.png
     - ui/bellicon.png
     - ui/todaybanner.png
+    - ui/Status.png
+    - ui/Waterlevel.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

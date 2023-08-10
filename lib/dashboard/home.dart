@@ -12,6 +12,7 @@ class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //the list view that shows the basic beginning shit
       body: ListView(
         children: [
           Container(
@@ -35,7 +36,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 30,
                         ),
                         Text(
-                          'Blank user',
+                          'Blank User',
                           style: TextStyle(
                               fontSize: 30, fontWeight: FontWeight.bold),
                         ),
@@ -97,7 +98,7 @@ class _DashboardState extends State<Dashboard> {
                           width: 40,
                         ),
                         Text(
-                          'You have a normal weigth',
+                          'You have a normal weight',
                           style: TextStyle(color: Colors.white),
                         ),
                       ],
@@ -127,7 +128,98 @@ class _DashboardState extends State<Dashboard> {
             height: 70,
             width: 200,
             margin: const EdgeInsets.all(20),
-            child: Image.asset('ui/todaybanner.png'),
+            child: Stack(
+              children: [
+                Image.asset('ui/todaybanner.png'),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      width: 30,
+                    ),
+                    const Text(
+                      'Today Target',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      width: 100,
+                    ),
+                    SizedBox(
+                      width: 100,
+                      height: 50,
+                      child: Glow(buttontext: 'check'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+//activity status container sha
+          const Row(
+            children: [
+              const SizedBox(
+                width: 30,
+              ),
+              Text(
+                'Activity Status',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          Container(
+            height: 180,
+            width: 250,
+            margin: const EdgeInsets.all(10),
+            child: Stack(
+              children: [
+                Image.asset('ui/Status.png'),
+                const Positioned.fill(
+                    right: 170,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 40,
+                        ),
+                        Text(
+                          'Heart Rate',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '78 BPM',
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 240, 208, 246),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        )
+                      ],
+                    )),
+              ],
+            ),
+          ),
+          //water intake container and all that
+          Row(
+            children: [
+              const SizedBox(
+                width: 10,
+              ),
+              Container(
+                height: 200,
+                width: 150,
+                margin: const EdgeInsets.all(5),
+                color: Colors.green,
+                child: Image.asset(
+                  'ui/Waterlevel.png',
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Container(
+                height: 200,
+                width: 150,
+                margin: const EdgeInsets.all(10),
+                color: Colors.green,
+              ),
+            ],
           ),
         ],
       ),
