@@ -204,20 +204,193 @@ class _DashboardState extends State<Dashboard> {
                 width: 10,
               ),
               Container(
-                height: 200,
+                height: 300,
                 width: 150,
                 margin: const EdgeInsets.all(5),
-                color: Colors.green,
-                child: Image.asset(
-                  'ui/Waterlevel.png',
-                  fit: BoxFit.fill,
-                ),
+                child: Stack(children: [
+                  Positioned.fill(
+                    child: Image.asset(
+                      'ui/Waterlevel.png',
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                  const Positioned.fill(
+                    left: 18,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        //push down the texts
+                        SizedBox(
+                          height: 40,
+                        ),
+                        SizedBox(
+                          height: 32,
+                          child: Column(
+                            children: [
+                              Text(
+                                'Water intake',
+                                style: TextStyle(
+                                    fontSize: 13, fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                '4 Litres',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 246, 192, 255),
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        //use padding widget to align the text
+                        Padding(
+                          padding: EdgeInsets.only(left: 5),
+                          child: Text(
+                            'Real time updates',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
+                        Text(
+                          '6am - 8am',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Text(
+                          '600ml',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromRGBO(242, 173, 254, 1),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text(
+                          '9am - 11am',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Text(
+                          '500ml',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromRGBO(242, 173, 254, 1),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text(
+                          '12pm - 2pm',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Text(
+                          '1000ml',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromRGBO(242, 173, 254, 1),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text(
+                          '2am - 4am',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Text(
+                          '700ml',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromRGBO(242, 173, 254, 1),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 3,
+                        ),
+                        Text(
+                          '4pm - now',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Text(
+                          '600ml',
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Color.fromRGBO(242, 173, 254, 1),
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ]),
               ),
+              //the second card holding the sleep and calories
               Container(
-                height: 200,
-                width: 150,
+                height: 300,
+                width: 130,
                 margin: const EdgeInsets.all(10),
                 color: Colors.green,
+                //write sleep and calories card
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 200,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage('ui/wavy.png'),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: const Column(
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Sleep',
+                                style: TextStyle(fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                '8h 20m',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 245, 195, 254),
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 200,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
