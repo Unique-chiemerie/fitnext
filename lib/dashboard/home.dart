@@ -394,7 +394,43 @@ class _DashboardState extends State<Dashboard> {
                         ),
                       ),
                       child: Column(
-                        children: [],
+                        children: [
+                          const SizedBox(
+                            height: 8,
+                          ),
+                          const Row(
+                            children: [
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                'Calories',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Row(
+                            children: [
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                '760 kCal',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Color.fromARGB(255, 245, 195, 254),
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 60,
+                            width: 60,
+                            child: Image.asset('ui/roundchart.png'),
+                          ),
+                        ],
                       ),
                     ),
                   ],
