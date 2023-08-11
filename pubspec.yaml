@@ -100,6 +100,11 @@ flutter:
     - ui/wavy.png
     - ui/calocard.png
     - ui/roundchart.png
+    - ui/details.png
+    - ui/pie.png
+    - ui/workout.png
+    - ui/pancakes.png
+    - ui/crunch.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

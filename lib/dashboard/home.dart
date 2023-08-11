@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
+import 'notificationscreen.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -11,6 +12,14 @@ class Dashboard extends StatefulWidget {
 class _DashboardState extends State<Dashboard> {
   @override
   Widget build(BuildContext context) {
+    void notification() {
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const notificationscreen(),
+          ));
+    }
+
     return Scaffold(
       //the list view that shows the basic beginning shit
       body: ListView(
@@ -51,7 +60,10 @@ class _DashboardState extends State<Dashboard> {
                   height: 30,
                   width: 30,
                   child: InkWell(
-                      onTap: () {}, child: Image.asset('ui/bellicon.png')),
+                      onTap: () {
+                        notification();
+                      },
+                      child: Image.asset('ui/bellicon.png')),
                 ),
               ],
             ),
@@ -334,7 +346,7 @@ class _DashboardState extends State<Dashboard> {
                 height: 300,
                 width: 130,
                 margin: const EdgeInsets.all(10),
-                color: Colors.green,
+
                 //write sleep and calories card
                 child: Column(
                   children: [
@@ -396,7 +408,7 @@ class _DashboardState extends State<Dashboard> {
                       child: Column(
                         children: [
                           const SizedBox(
-                            height: 8,
+                            height: 2,
                           ),
                           const Row(
                             children: [
@@ -426,9 +438,25 @@ class _DashboardState extends State<Dashboard> {
                             ],
                           ),
                           SizedBox(
-                            height: 60,
-                            width: 60,
-                            child: Image.asset('ui/roundchart.png'),
+                            height: 66,
+                            width: 70,
+                            child: Stack(
+                              children: [
+                                Image.asset('ui/roundchart.png'),
+                                const Positioned.fill(
+                                  left: 17,
+                                  top: 17,
+                                  child: Text(
+                                    '230k cal\n'
+                                    ' left',
+                                    style: TextStyle(
+                                        fontSize: 9,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ],
                       ),
