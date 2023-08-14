@@ -10,7 +10,7 @@ class banner extends StatelessWidget {
     void homes() {
       Navigator.push(context, MaterialPageRoute(
         builder: (context) {
-          return Dashboard();
+          return BnB();
         },
       ));
     }
