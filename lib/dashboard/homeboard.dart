@@ -476,6 +476,51 @@ class _DashboardState extends State<Dashboard> {
               ),
             ],
           ),
+          //this is the workout progress thingy ...
+          SizedBox(
+            height: 700,
+            width: double.infinity,
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    const Text(
+                      'Workout Progress',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                    ),
+                    const SizedBox(
+                      width: 60,
+                    ),
+                    //this is the button that takes user to the workout screen
+                    InkWell(
+                      onTap: () {},
+                      child: SizedBox(
+                        height: 70,
+                        width: 120,
+                        child: Stack(
+                          children: [
+                            Glow(buttontext: 'Weekly'),
+                            const Positioned(
+                              bottom: 23,
+                              left: 80,
+                              child: Icon(
+                                Icons.arrow_drop_down,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
