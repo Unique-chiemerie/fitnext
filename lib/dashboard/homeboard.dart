@@ -485,7 +485,7 @@ class _DashboardState extends State<Dashboard> {
                 Row(
                   children: [
                     const SizedBox(
-                      width: 10,
+                      width: 25,
                     ),
                     const Text(
                       'Workout Progress',
