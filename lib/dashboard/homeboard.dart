@@ -464,7 +464,7 @@ class _DashboardState extends State<Dashboard> {
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                )
+                                ),
                               ],
                             ),
                           ),
