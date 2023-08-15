@@ -120,6 +120,9 @@ flutter:
     - ui/knee.png
     - ui/bar.png
     - ui/abs.png
+    - ui/barrz.png
+    - ui/activi.png
+    - ui/sippin.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

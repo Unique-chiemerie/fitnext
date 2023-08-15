@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
+import 'package:workout_ui/dashboard/activitylist.dart';
 
 class activityscreen extends StatelessWidget {
   const activityscreen({super.key});
@@ -118,6 +119,94 @@ class activityscreen extends StatelessWidget {
                 child: Glow(buttontext: 'Weekly'),
               ),
             ],
+          ),
+          //this is where the activity chart is
+          Container(
+            height: 200,
+            width: 200,
+            margin: const EdgeInsetsDirectional.all(10),
+            child: Image.asset(
+              'ui/barrz.png',
+              fit: BoxFit.fill,
+            ),
+          ),
+          const Row(
+            children: [
+              SizedBox(
+                width: 30,
+              ),
+              Text(
+                'Latest Activity',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+              ),
+              SizedBox(
+                width: 100,
+              ),
+              Text(
+                'see more',
+                style: TextStyle(fontSize: 15, color: Colors.grey),
+              ),
+            ],
+          ),
+          Container(
+            height: 200,
+            width: 250,
+            margin: const EdgeInsets.all(10),
+            child: // we build the tiles for the activities here
+                ListView.builder(
+              itemCount: activitylist.length,
+              itemBuilder: (context, index) {
+                //we put it in a row and arrange a column for the header and subtitle
+                final lead = activitylist[index].leading;
+                final head = activitylist[index].heading;
+                final sub = activitylist[index].subtitle;
+
+                return Container(
+                  height: 70,
+                  width: 250,
+                  margin: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 50,
+                        width: 50,
+                        child: lead,
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Text(
+                            head,
+                            style: const TextStyle(
+                                fontWeight: FontWeight.w500, fontSize: 17),
+                          ),
+                          Text(
+                            sub,
+                            style: const TextStyle(color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 80,
+                      ),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.more_vert_outlined),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
         ],
       ),

@@ -612,7 +612,7 @@ class _DashboardState extends State<Dashboard> {
                                           ),
                                         ),
                                         //progress
-                                        Container(
+                                        SizedBox(
                                             height: 20,
                                             width: 160,
                                             child: progress)
