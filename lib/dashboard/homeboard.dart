@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/dashboard/activity.dart';
 import 'package:workout_ui/dashboard/workoutlist.dart';
+
 import 'notificationscreen.dart';
 
 class Dashboard extends StatefulWidget {
@@ -524,38 +525,114 @@ class _DashboardState extends State<Dashboard> {
                   width: 300,
                   child: Image.asset('ui/Graph.png'),
                 ),
-              ],
-            ),
-          ),
-          //the listile of latest workout and somethings like calories shit
-          SizedBox(
-            height: 300,
-            width: 300,
-            child: Column(
-              children: [
-                const Row(
-                  children: [
-                    Text(
-                      'Latest Workout',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(
-                      width: 70,
-                    ),
-                    Text(
-                      'see more',
-                      style: TextStyle(fontSize: 10, color: Colors.grey),
-                    ),
-                  ],
+                const SizedBox(
+                  height: 20,
                 ),
-                ListView.builder(
-                  itemCount: workoutlist.length,
-                  itemBuilder: (context, index) => Container(
-                    height: 50,
-                    width: 370,
-                    margin: const EdgeInsets.all(10),
-                    color: Colors.green,
+                //the workout list tile thingy
+                SizedBox(
+                  width: 300,
+                  child: Column(
+                    children: [
+                      const Row(
+                        children: [
+                          Text(
+                            'Latest Workout',
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(
+                            width: 130,
+                          ),
+                          Text(
+                            'see more',
+                            style: TextStyle(fontSize: 15, color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      //this is the listile that holds the workout info
+                      Container(
+                        height: 350,
+                        width: 400,
+                        child: Expanded(
+                          child: ListView.builder(
+                            itemCount: workoutlist.length,
+                            itemBuilder: (context, index) {
+                              final header = workoutlist[index].workoutarea;
+                              final subtitle = workoutlist[index].wcalotime;
+                              final progress = workoutlist[index].prgressba;
+                              final prefix = workoutlist[index].endingicon;
+                              final leading = workoutlist[index].workoutimage;
+
+//building the tiles below the Latest workout header
+                              return Container(
+                                height: 80,
+                                width: 400,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.white,
+                                    boxShadow: const []),
+                                child: Row(
+                                  children: [
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    //leading icon
+                                    Container(
+                                      height: 60,
+                                      width: 60,
+                                      child: leading,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    //the text and progress bar on the listtile..
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          header,
+                                          style: const TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+                                        Text(
+                                          subtitle,
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            color:
+                                                Color.fromARGB(255, 82, 82, 82),
+                                          ),
+                                        ),
+                                        //progress
+                                        Container(
+                                            height: 20,
+                                            width: 160,
+                                            child: progress)
+                                      ],
+                                      //the column ends here
+                                    ),
+                                    //the trailing icon goes here:
+                                    const SizedBox(
+                                      width: 20,
+                                    ),
+                                    SizedBox(
+                                        width: 40, height: 40, child: prefix),
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
