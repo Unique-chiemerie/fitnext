@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/dashboard/activity.dart';
+import 'package:workout_ui/dashboard/workoutlist.dart';
 import 'notificationscreen.dart';
 
 class Dashboard extends StatefulWidget {
@@ -517,6 +518,45 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                   ],
+                ),
+                SizedBox(
+                  height: 200,
+                  width: 300,
+                  child: Image.asset('ui/Graph.png'),
+                ),
+              ],
+            ),
+          ),
+          //the listile of latest workout and somethings like calories shit
+          SizedBox(
+            height: 300,
+            width: 300,
+            child: Column(
+              children: [
+                const Row(
+                  children: [
+                    Text(
+                      'Latest Workout',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: 70,
+                    ),
+                    Text(
+                      'see more',
+                      style: TextStyle(fontSize: 10, color: Colors.grey),
+                    ),
+                  ],
+                ),
+                ListView.builder(
+                  itemCount: workoutlist.length,
+                  itemBuilder: (context, index) => Container(
+                    height: 50,
+                    width: 370,
+                    margin: const EdgeInsets.all(10),
+                    color: Colors.green,
+                  ),
                 ),
               ],
             ),
