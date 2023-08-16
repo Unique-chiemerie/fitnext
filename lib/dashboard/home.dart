@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workout_ui/dashboard/activityboard.dart';
 import 'package:workout_ui/dashboard/camera.dart';
 import 'package:workout_ui/dashboard/homeboard.dart';
-import 'package:workout_ui/dashboard/profile.dart';
+import 'package:workout_ui/dashboard/profileboard.dart';
 import 'package:workout_ui/dashboard/searchboard.dart';
 
 class BnB extends StatefulWidget {
@@ -23,7 +23,7 @@ class _BnBState extends State<BnB> {
       const activityb(),
       const searchb(),
       const camerab(),
-      profileb(),
+      const profileb(),
     ];
     return Scaffold(
       body: Stack(
