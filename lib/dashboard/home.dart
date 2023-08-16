@@ -23,7 +23,7 @@ class _BnBState extends State<BnB> {
       const activityb(),
       const searchb(),
       const camerab(),
-      const profileb(),
+      profileb(),
     ];
     return Scaffold(
       body: Stack(
