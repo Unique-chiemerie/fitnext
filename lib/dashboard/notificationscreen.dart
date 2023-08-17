@@ -49,7 +49,7 @@ class notificationscreen extends StatelessWidget {
                 final iconn = notifications[index].pic;
 
                 return ListTile(
-                  leading: Container(
+                  leading: SizedBox(
                     height: 40,
                     width: 40,
                     child: iconn,

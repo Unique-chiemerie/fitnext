@@ -38,7 +38,7 @@ class activityscreen extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Container(
+          SizedBox(
             width: 250,
             height: 140,
             child: Stack(
@@ -98,19 +98,19 @@ class activityscreen extends StatelessWidget {
           const SizedBox(
             height: 40,
           ),
-          Row(
+          const Row(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 30,
               ),
-              const Text(
+              Text(
                 'Activity Progress',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 width: 70,
               ),
               SizedBox(
@@ -170,7 +170,7 @@ class activityscreen extends StatelessWidget {
                       color: Colors.white),
                   child: Row(
                     children: [
-                      Container(
+                      SizedBox(
                         height: 50,
                         width: 50,
                         child: lead,

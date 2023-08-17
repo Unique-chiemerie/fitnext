@@ -11,7 +11,7 @@ class SkiP extends StatelessWidget {
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          pageBuilder: (context, animation, secondaryAnimation) => LooseFat(),
+          pageBuilder: (context, animation, secondaryAnimation) => const LooseFat(),
           transitionDuration: const Duration(milliseconds: 500),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             const begin = Offset(1, 0);
@@ -69,7 +69,7 @@ class SkiP extends StatelessWidget {
                   onTap: () {
                     fat();
                   },
-                  child: Glow(buttontext: 'Confirm'))
+                  child: const Glow(buttontext: 'Confirm'))
             ],
           )
         ],

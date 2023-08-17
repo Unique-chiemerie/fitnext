@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class lista extends StatelessWidget {
-  lista({required this.imagepath, required this.topname});
+  const lista({super.key, required this.imagepath, required this.topname});
 
   final String imagepath;
   final String topname;

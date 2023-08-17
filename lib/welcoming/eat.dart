@@ -11,7 +11,7 @@ class EatWell extends StatelessWidget {
         context,
         PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 500),
-          pageBuilder: (context, animation, secondaryAnimation) => SleeP(),
+          pageBuilder: (context, animation, secondaryAnimation) => const SleeP(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             const begin = Offset(1.0, 0);
             const end = Offset.zero;

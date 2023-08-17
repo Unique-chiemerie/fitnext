@@ -12,7 +12,7 @@ class welcomeS extends StatelessWidget {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => banner(),
+          builder: (context) => const banner(),
         ),
       );
     }
@@ -65,7 +65,7 @@ class welcomeS extends StatelessWidget {
           Positioned.fill(
             child: Stack(
               children: [
-                Center(
+                const Center(
                   child: Glow(buttontext: ''),
                 ),
                 Positioned(
@@ -110,7 +110,7 @@ class welcomeS extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
+              SizedBox(
                 height: 70,
                 width: 70,
                 child: Image.asset('ui/google.png'),
@@ -118,7 +118,7 @@ class welcomeS extends StatelessWidget {
               const SizedBox(
                 width: 40,
               ),
-              Container(
+              SizedBox(
                 height: 70,
                 width: 70,
                 child: Image.asset('ui/facebook.png'),

@@ -7,7 +7,7 @@ class profileb extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('something righ?'),
+        title: const Text('something righ?'),
       ),
     );
   }

@@ -12,7 +12,7 @@ class GoalScreen extends StatelessWidget {
         context,
         PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 500),
-          pageBuilder: (context, animation, secondaryAnimation) => SkiP(),
+          pageBuilder: (context, animation, secondaryAnimation) => const SkiP(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             const begin = Offset(1, 0);
             const end = Offset.zero;
@@ -71,7 +71,7 @@ class GoalScreen extends StatelessWidget {
                   onTap: () {
                     skip();
                   },
-                  child: Glow(buttontext: 'Confirm'))
+                  child: const Glow(buttontext: 'Confirm'))
             ],
           )
         ],

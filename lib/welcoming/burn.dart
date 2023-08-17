@@ -11,7 +11,7 @@ class burn extends StatelessWidget {
         context,
         PageRouteBuilder(
           transitionDuration: const Duration(milliseconds: 500),
-          pageBuilder: (context, animation, secondaryAnimation) => EatWell(),
+          pageBuilder: (context, animation, secondaryAnimation) => const EatWell(),
           transitionsBuilder: (context, animation, secondaryAnimation, child) {
             const begin = Offset(
               1.0,

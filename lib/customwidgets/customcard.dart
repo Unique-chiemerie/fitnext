@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CarD extends StatelessWidget {
-  const CarD({required this.child});
+  const CarD({super.key, required this.child});
   final Widget child;
 
   @override

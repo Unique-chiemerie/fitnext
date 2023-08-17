@@ -27,7 +27,7 @@ class _DashboardState extends State<Dashboard> {
       //the list view that shows the basic beginning shit
       body: ListView(
         children: [
-          Container(
+          SizedBox(
             height: 120,
             width: 70,
             child: Row(
@@ -128,7 +128,7 @@ class _DashboardState extends State<Dashboard> {
                           height: 50,
                           child: InkWell(
                             onTap: () {},
-                            child: Glow(buttontext: 'View more'),
+                            child: const Glow(buttontext: 'View more'),
                           ),
                         ),
                       ],
@@ -146,17 +146,17 @@ class _DashboardState extends State<Dashboard> {
             child: Stack(
               children: [
                 Image.asset('ui/todaybanner.png'),
-                Row(
+                const Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(
+                    SizedBox(
                       width: 30,
                     ),
-                    const Text(
+                    Text(
                       'Today Target',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 100,
                     ),
                     SizedBox(
@@ -172,7 +172,7 @@ class _DashboardState extends State<Dashboard> {
 //activity status container sha
           const Row(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 30,
               ),
               Text(
@@ -192,7 +192,7 @@ class _DashboardState extends State<Dashboard> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => activityscreen(),
+                          builder: (context) => const activityscreen(),
                         ),
                       );
                     },
@@ -500,13 +500,13 @@ class _DashboardState extends State<Dashboard> {
                     //this is the button that takes user to the workout screen
                     InkWell(
                       onTap: () {},
-                      child: SizedBox(
+                      child: const SizedBox(
                         height: 70,
                         width: 120,
                         child: Stack(
                           children: [
                             Glow(buttontext: 'Weekly'),
-                            const Positioned(
+                            Positioned(
                               bottom: 23,
                               left: 80,
                               child: Icon(
@@ -553,7 +553,7 @@ class _DashboardState extends State<Dashboard> {
                         height: 10,
                       ),
                       //this is the listile that holds the workout info
-                      Container(
+                      SizedBox(
                         height: 350,
                         width: 400,
                         child: Expanded(
@@ -580,7 +580,7 @@ class _DashboardState extends State<Dashboard> {
                                       width: 5,
                                     ),
                                     //leading icon
-                                    Container(
+                                    SizedBox(
                                       height: 60,
                                       width: 60,
                                       child: leading,

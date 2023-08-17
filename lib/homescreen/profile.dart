@@ -12,7 +12,7 @@ class profilescreen extends StatelessWidget {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => GoalScreen(),
+          builder: (context) => const GoalScreen(),
         ),
       );
     }
@@ -131,7 +131,7 @@ class profilescreen extends StatelessWidget {
               onTap: () {
                 goal();
               },
-              child: Glow(buttontext: 'Next >'))
+              child: const Glow(buttontext: 'Next >'))
         ],
       ),
     );

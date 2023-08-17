@@ -36,7 +36,7 @@ class _BnBState extends State<BnB> {
               Positioned(
                 left: 130,
                 bottom: 20,
-                child: Container(
+                child: SizedBox(
                   height: 100,
                   width: 100,
                   child: Image.asset('ui/sech.png'),
@@ -96,7 +96,7 @@ class _BnBState extends State<BnB> {
           currentscreen = index;
         });
       },
-      child: Container(
+      child: SizedBox(
         height: 30,
         width: 30,
         child: Image.asset(imagepath),

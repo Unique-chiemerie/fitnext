@@ -22,7 +22,7 @@ class banner extends StatelessWidget {
             height: 50,
           ),
           Center(
-            child: Container(
+            child: SizedBox(
               height: 400,
               width: 300,
               child: Image.asset('ui/mwm.png'),
@@ -48,7 +48,7 @@ class banner extends StatelessWidget {
               onTap: () {
                 homes();
               },
-              child: Glow(buttontext: 'Go To Home'))
+              child: const Glow(buttontext: 'Go To Home'))
         ],
       ),
     );

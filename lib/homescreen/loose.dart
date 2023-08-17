@@ -11,7 +11,7 @@ class LooseFat extends StatelessWidget {
       Navigator.pushReplacement(
           context,
           PageRouteBuilder(
-            transitionDuration: Duration(milliseconds: 500),
+            transitionDuration: const Duration(milliseconds: 500),
             pageBuilder: (context, animation, secondaryAnimation) =>
                 const welcomeS(),
             transitionsBuilder:
@@ -67,7 +67,7 @@ class LooseFat extends StatelessWidget {
                   onTap: () {
                     welcomeb();
                   },
-                  child: Glow(buttontext: 'confirm'))
+                  child: const Glow(buttontext: 'confirm'))
             ],
           )
         ],

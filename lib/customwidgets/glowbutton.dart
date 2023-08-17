@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Glow extends StatelessWidget {
-  Glow({
+  const Glow({super.key, 
     required this.buttontext,
   });
   final String buttontext;

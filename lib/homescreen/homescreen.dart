@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => profilescreen(),
+          builder: (context) => const profilescreen(),
         ),
       );
     }
@@ -87,7 +87,7 @@ class HomeScreen extends StatelessWidget {
             onTap: () {
               register();
             },
-            child: Glow(buttontext: 'Register'),
+            child: const Glow(buttontext: 'Register'),
           ),
           Container(
             margin: const EdgeInsets.all(10),
