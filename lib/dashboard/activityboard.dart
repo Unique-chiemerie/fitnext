@@ -3,6 +3,7 @@ import 'package:workout_ui/customwidgets/customcard.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/customwidgets/listile.dart';
 import 'package:workout_ui/customwidgets/switch.dart';
+import 'package:workout_ui/dashboard/home.dart';
 
 class Activityb extends StatefulWidget {
   const Activityb({super.key});
@@ -28,7 +29,14 @@ class _ActivitybState extends State<Activityb> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BnB(),
+                    ),
+                  );
+                },
                 icon: const Icon(Icons.arrow_back_ios_new),
               ),
               const SizedBox(

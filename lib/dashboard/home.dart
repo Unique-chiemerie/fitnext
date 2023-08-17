@@ -13,18 +13,19 @@ class BnB extends StatefulWidget {
 }
 
 int currentscreen = 0;
+final List<Widget> screenz = [
+  const Dashboard(),
+  const Activityb(),
+  const searchb(),
+  const camerab(),
+  const profileb(),
+];
 
 class _BnBState extends State<BnB> {
   @override
   Widget build(BuildContext context) {
     //the list of the screens go here...
-    final List<Widget> screenz = [
-      const Dashboard(),
-      const Activityb(),
-      const searchb(),
-      const camerab(),
-      const profileb(),
-    ];
+
     return Scaffold(
       body: Stack(
         children: [
