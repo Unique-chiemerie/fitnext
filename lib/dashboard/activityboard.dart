@@ -245,7 +245,7 @@ class activityb extends StatelessWidget {
           ///Another card to show the notifications switch thingy
           ///built in a different (slider file and imported here)
           SizedBox(
-            height: 100,
+            height: 130,
             width: 300,
             child: CarD(
                 child: Column(
@@ -270,13 +270,23 @@ class activityb extends StatelessWidget {
                     ),
                     const Text('Pop-up Notification'),
                     const SizedBox(
-                      width: 70,
+                      width: 120,
                     ),
-                    switcher(),
+                    const SizedBox(
+                      height: 50,
+                      width: 70,
+                      child: switcher(),
+                    ),
                   ],
                 ),
               ],
             )),
+          ),
+
+          ///this is the second card , holding the contact us , privacy and allat
+          ///i wil import the already premaid card widget and build on it instead
+          const CarD(
+            child: Placeholder(),
           ),
         ],
       ),
