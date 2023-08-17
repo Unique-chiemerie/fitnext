@@ -4,9 +4,14 @@ import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/customwidgets/listile.dart';
 import 'package:workout_ui/customwidgets/switch.dart';
 
-class activityb extends StatelessWidget {
+class activityb extends StatefulWidget {
   const activityb({super.key});
 
+  @override
+  State<activityb> createState() => _activitybState();
+}
+
+class _activitybState extends State<activityb> {
   @override
   Widget build(BuildContext context) {
     String username = 'Blank user';
@@ -78,7 +83,7 @@ class activityb extends StatelessWidget {
               const SizedBox(
                 width: 50,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
                 width: 100,
                 child: Glow(buttontext: 'Edit'),
@@ -221,11 +226,11 @@ class activityb extends StatelessWidget {
           ///done with the metrics row now it's time
           ///for the activity which has got alot of icons , so to keep the ui clean we could build
           ///a new widget instead and just dey import am inside the screens to keep the codes clean ofc
-          CarD(
+          const CarD(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
+                Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
                     'Activity',
@@ -286,7 +291,23 @@ class activityb extends StatelessWidget {
           ///this is the second card , holding the contact us , privacy and allat
           ///i wil import the already premaid card widget and build on it instead
           const CarD(
-            child: Placeholder(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Other',
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                  ),
+                ),
+
+                ///this is the tile of icons
+                lista(imagepath: 'ui/contact.png', topname: 'Contact us'),
+                lista(imagepath: 'ui/privacy.png', topname: 'Privacy'),
+                lista(imagepath: 'ui/seti.png', topname: 'Settings'),
+              ],
+            ),
           ),
         ],
       ),
