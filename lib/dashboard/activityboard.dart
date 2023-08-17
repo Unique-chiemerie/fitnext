@@ -4,14 +4,14 @@ import 'package:workout_ui/customwidgets/glowbutton.dart';
 import 'package:workout_ui/customwidgets/listile.dart';
 import 'package:workout_ui/customwidgets/switch.dart';
 
-class activityb extends StatefulWidget {
-  const activityb({super.key});
+class Activityb extends StatefulWidget {
+  const Activityb({super.key});
 
   @override
-  State<activityb> createState() => _activitybState();
+  State<Activityb> createState() => _ActivitybState();
 }
 
-class _activitybState extends State<activityb> {
+class _ActivitybState extends State<Activityb> {
   @override
   Widget build(BuildContext context) {
     String username = 'Blank user';

@@ -20,7 +20,7 @@ class _BnBState extends State<BnB> {
     //the list of the screens go here...
     final List<Widget> screenz = [
       const Dashboard(),
-      const activityb(),
+      const Activityb(),
       const searchb(),
       const camerab(),
       const profileb(),
@@ -72,7 +72,7 @@ class _BnBState extends State<BnB> {
                 const SizedBox(
                   width: 5,
                 ),
-                navbaitem('ui/activitychart.png', 1),
+                navbaitem('ui/profile.png', 1),
                 const SizedBox(
                   width: 30,
                 ),
@@ -80,7 +80,7 @@ class _BnBState extends State<BnB> {
                 const SizedBox(
                   width: 5,
                 ),
-                navbaitem('ui/profile.png', 3),
+                navbaitem('ui/activitychart.png', 3),
               ],
             ),
           ),
