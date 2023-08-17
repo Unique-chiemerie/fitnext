@@ -7,7 +7,7 @@ class CarD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 230,
+      height: 330,
       width: 300,
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(

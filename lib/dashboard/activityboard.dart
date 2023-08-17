@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:workout_ui/customwidgets/customcard.dart';
 import 'package:workout_ui/customwidgets/glowbutton.dart';
+import 'package:workout_ui/customwidgets/listile.dart';
+import 'package:workout_ui/customwidgets/switch.dart';
 
 class activityb extends StatelessWidget {
   const activityb({super.key});
@@ -220,38 +222,62 @@ class activityb extends StatelessWidget {
           ///for the activity which has got alot of icons , so to keep the ui clean we could build
           ///a new widget instead and just dey import am inside the screens to keep the codes clean ofc
           CarD(
-              child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: Text(
-                  'Activity',
-                  style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Activity',
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                  ),
                 ),
-              ),
-              Container(
-                height: 50,
-                width: 300,
-                color: Colors.red,
-                margin: const EdgeInsets.all(10),
-                child: Row(
+
+                ///this is the tile of icons
+                lista(imagepath: 'ui/pp.png', topname: 'Personal Data'),
+                lista(imagepath: 'ui/aa.png', topname: 'Achievement'),
+                lista(imagepath: 'ui/acc.png', topname: 'Activity History'),
+                lista(imagepath: 'ui/graff.png', topname: 'Workout Progress'),
+              ],
+            ),
+          ),
+
+          ///Another card to show the notifications switch thingy
+          ///built in a different (slider file and imported here)
+          SizedBox(
+            height: 100,
+            width: 300,
+            child: CarD(
+                child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Notification',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Row(
                   children: [
                     SizedBox(
                       height: 30,
                       width: 30,
-                      child: Image.asset('ui/pp.png'),
+                      child: Image.asset('ui/bellicon.png'),
                     ),
-                    const Text(
-                      'Personal Data',
-                      style: TextStyle(
-                          fontFamily: 'raleway', fontWeight: FontWeight.w500),
+                    const Text('Pop-up Notification'),
+                    const SizedBox(
+                      width: 70,
                     ),
+                    switcher(),
                   ],
                 ),
-              ),
-            ],
-          ))
+              ],
+            )),
+          ),
         ],
       ),
     );

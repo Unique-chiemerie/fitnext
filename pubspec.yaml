@@ -124,6 +124,10 @@ flutter:
     - ui/activi.png
     - ui/sippin.png
     - ui/pp.png
+    - ui/aa.png
+    - ui/graff.png
+    - ui/acc.png
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
