@@ -305,7 +305,7 @@ class _activitybState extends State<activityb> {
                 ///this is the tile of icons
                 lista(imagepath: 'ui/contact.png', topname: 'Contact us'),
                 lista(imagepath: 'ui/privacy.png', topname: 'Privacy'),
-                lista(imagepath: 'ui/seti.png', topname: 'Settings'),
+                lista(imagepath: 'ui/setti.png', topname: 'Settings'),
               ],
             ),
           ),
