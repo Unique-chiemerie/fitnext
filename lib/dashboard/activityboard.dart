@@ -285,8 +285,24 @@ class activityb extends StatelessWidget {
 
           ///this is the second card , holding the contact us , privacy and allat
           ///i wil import the already premaid card widget and build on it instead
-          const CarD(
-            child: Placeholder(),
+          CarD(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'Activity',
+                    style: TextStyle(fontSize: 23, fontWeight: FontWeight.bold),
+                  ),
+                ),
+
+                ///this is the tile of icons
+                lista(imagepath: 'ui/contact.png', topname: 'Contact us'),
+                lista(imagepath: 'ui/privacy.png', topname: 'Privacy'),
+                lista(imagepath: 'ui/seti.png', topname: 'Settings'),
+              ],
+            ),
           ),
         ],
       ),
