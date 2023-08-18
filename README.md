@@ -1,4 +1,11 @@
-# workout app
+# demo/examples
+
+![fitnext profile](demo/fitnext1.jpg)
+![fitnext dashboard](demo/fitnext%202.jpg)
+![fitnext user image](demo/fitnext%203.jpg)
+![fitnext create account](demo/fitnext%204.jpg)
+
+## workout app
 
 i built the UI of a workout app , from scratch with flutter.
 
