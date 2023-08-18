@@ -13,6 +13,7 @@ class BnB extends StatefulWidget {
 }
 
 int currentscreen = 0;
+
 final List<Widget> screenz = [
   const Dashboard(),
   const Activityb(),
@@ -90,16 +91,23 @@ class _BnBState extends State<BnB> {
     );
   }
 
+  Color activecolor = const Color.fromARGB(255, 243, 205, 250);
+
   Widget navbaitem(String imagepath, int index) {
+    bool isActive = index == currentscreen;
+
     return InkWell(
       onTap: () {
         setState(() {
           currentscreen = index;
         });
       },
-      child: SizedBox(
+      child: Container(
         height: 30,
         width: 30,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(100),
+            color: isActive ? activecolor : Colors.transparent),
         child: Image.asset(imagepath),
       ),
     );
